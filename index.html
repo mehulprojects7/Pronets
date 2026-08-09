@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<!-- saved from url=(0084)file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProNets Basketball Academy – Train Hard. Play Smart.</title>
+    <!-- Tailwind CSS (CDN) -->
+    <script src="./index_files/saved_resource"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="./index_files/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./index_files/css2" rel="stylesheet">
+    <!-- AOS Library -->
+    <link href="./index_files/aos.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5 {
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 0.02em;
+        }
+        .font-bebas {
+            font-family: 'Bebas Neue', cursive;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        /* Brand Colors */
+        :root {
+            --black: #1A1A1A;
+            --red: #E31837;
+            --orange: #F57C00;
+            --white: #FFFFFF;
+            --dark: #0D0D0D;
+            --gold: #FFD700;
+        }
+        .bg-brand-black { background-color: #1A1A1A; }
+        .bg-brand-red { background-color: #E31837; }
+        .bg-brand-orange { background-color: #F57C00; }
+        .text-brand-red { color: #E31837; }
+        .text-brand-orange { color: #F57C00; }
+        .border-brand-red { border-color: #E31837; }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+        }
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Gradient Buttons */
+        .btn-primary {
+            background: linear-gradient(135deg, #E31837, #F57C00);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 15px rgba(227, 24, 55, 0.4);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(227, 24, 55, 0.6);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-outline:hover {
+            background: #fff;
+            color: #1A1A1A;
+            transform: translateY(-3px);
+        }
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        .btn-whatsapp:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Hero Background */
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 100%), url('https://images.unsplash.com/photo-1546519638-68e109498ffc?w=1600&q=80') center/cover no-repeat;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        /* Bouncing basketball */
+        .basketball-bounce {
+            animation: bounceBall 2s infinite ease-in-out;
+        }
+        @keyframes bounceBall {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+        }
+        /* Scroll indicator */
+        .scroll-down {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounceArrow 2s infinite;
+            cursor: pointer;
+        }
+        @keyframes bounceArrow {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        /* Counter animation (simple) */
+        .counter-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #E31837;
+        }
+
+        /* Coach card hover */
+        .coach-card {
+            transition: all 0.4s ease;
+        }
+        .coach-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(227, 24, 55, 0.2);
+        }
+
+        /* Gallery hover */
+        .gallery-item img {
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Sticky CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-end;
+        }
+        .sticky-cta .whatsapp {
+            background: #25D366;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5);
+            transition: 0.3s;
+        }
+        .sticky-cta .whatsapp:hover {
+            transform: scale(1.1);
+        }
+        .sticky-cta .book-now {
+            background: linear-gradient(135deg, #E31837, #F57C00);
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            color: white;
+            box-shadow: 0 4px 15px rgba(227, 24, 55, 0.4);
+            transition: 0.3s;
+            border: none;
+        }
+        .sticky-cta .book-now:hover {
+            transform: scale(1.05);
+        }
+
+        /* FAQ */
+        .faq-question {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .faq-question:hover {
+            color: #E31837;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-answer.open {
+            max-height: 200px;
+        }
+
+        /* Testimonial slider (simple) */
+        .testimonial-slider {
+            display: flex;
+            overflow: hidden;
+            scroll-snap-type: x mandatory;
+            gap: 1.5rem;
+            padding: 1rem 0;
+        }
+        .testimonial-slider .slide {
+            min-width: 300px;
+            scroll-snap-align: start;
+            flex-shrink: 0;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 640px) {
+            .hero-bg h1 {
+                font-size: 2.5rem;
+            }
+            .counter-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.bottom-20{bottom:5rem}.left-0{left:0px}.right-10{right:2.5rem}.top-0{top:0px}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mr-1{margin-right:0.25rem}.mr-2{margin-right:0.5rem}.mt-1{margin-top:0.25rem}.mt-16{margin-top:4rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-32{height:8rem}.h-48{height:12rem}.h-64{height:16rem}.w-32{width:8rem}.w-full{width:100%}.min-w-\[280px\]{min-width:280px}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.snap-x{scroll-snap-type:x var(--tw-scroll-snap-strictness)}.snap-mandatory{--tw-scroll-snap-strictness:mandatory}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-12{gap:3rem}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-l-lg{border-top-left-radius:0.5rem;border-bottom-left-radius:0.5rem}.rounded-r-lg{border-top-right-radius:0.5rem;border-bottom-right-radius:0.5rem}.border{border-width:1px}.border-t{border-top-width:1px}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.border-gray-800{--tw-border-opacity:1;border-color:rgb(31 41 55 / var(--tw-border-opacity, 1))}.bg-\[\#0D0D0D\]{--tw-bg-opacity:1;background-color:rgb(13 13 13 / var(--tw-bg-opacity, 1))}.bg-black\/50{background-color:rgb(0 0 0 / 0.5)}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.object-cover{object-fit:cover}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.pb-4{padding-bottom:1rem}.pt-20{padding-top:5rem}.pt-6{padding-top:1.5rem}.text-left{text-align:left}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-8xl{font-size:6rem;line-height:1}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-light{font-weight:300}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-wider{letter-spacing:0.05em}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.opacity-60{opacity:0.6}.outline-none{outline:2px solid transparent;outline-offset:2px}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}@media (min-width: 640px){.sm\:inline-block{display:inline-block}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 768px){.md\:mx-0{margin-left:0px;margin-right:0px}.md\:flex{display:flex}.md\:min-w-\[350px\]{min-width:350px}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.md\:justify-start{justify-content:flex-start}.md\:p-12{padding:3rem}.md\:px-12{padding-left:3rem;padding-right:3rem}.md\:text-left{text-align:left}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-7xl{font-size:4.5rem;line-height:1}}@media (min-width: 1024px){.lg\:block{display:block}.lg\:h-96{height:24rem}.lg\:w-1\/2{width:50%}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:flex-row{flex-direction:row}}</style></head>
+<body data-aos-easing="ease" data-aos-duration="800" data-aos-delay="0">
+
+    <!-- ==================== STICKY CTA ==================== -->
+    <div class="sticky-cta">
+        <a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#" class="book-now" onclick="document.getElementById(&#39;enquiry&#39;).scrollIntoView({behavior:&#39;smooth&#39;}); return false;">
+            <i class="fas fa-basketball-ball mr-2"></i> Book Free Trial
+        </a>
+        <a href="https://wa.me/917738140637?text=Hi!%20I%20want%20to%20know%20more%20about%20ProNets%20Basketball%20Academy." target="_blank" class="whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-dark px-6 py-3 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <span class="text-2xl font-bebas text-brand-red">ProNets</span>
+            <span class="text-xs font-bold text-white opacity-60">BASKETBALL ACADEMY</span>
+        </div>
+        <nav class="hidden md:flex gap-8 text-sm font-semibold uppercase tracking-wider">
+            <a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#about" class="hover:text-brand-red transition">About</a>
+            <a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#programs" class="hover:text-brand-red transition">Programs</a>
+            <a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#coaches" class="hover:text-brand-red transition">Coaches</a>
+            <a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#testimonials" class="hover:text-brand-red transition">Reviews</a>
+            <a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#contact" class="hover:text-brand-red transition">Contact</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <a href="tel:07738140637" class="text-sm hidden sm:inline-block text-white hover:text-brand-red">
+                <i class="fas fa-phone-alt mr-1"></i> 07738140637
+            </a>
+            <button class="btn-primary text-sm py-2 px-5" onclick="document.getElementById(&#39;enquiry&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">
+                <i class="fas fa-basketball-ball mr-2"></i> Free Trial
+            </button>
+        </div>
+    </header>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero-bg relative" id="home">
+        <div class="container mx-auto px-6 md:px-12 text-center md:text-left relative z-10 pt-20">
+            <div data-aos="fade-up" data-aos-duration="1000" class="aos-init aos-animate">
+                <div class="inline-block bg-brand-red px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+                    <i class="fas fa-basketball-ball mr-1"></i> Mumbai's Premier Academy
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+                    Train Hard.<br>
+                    <span class="text-brand-red">Play Smart.</span><br>
+                    Become Unstoppable.
+                </h1>
+                <p class="text-lg md:text-2xl text-gray-300 max-w-2xl mx-auto md:mx-0 mt-4" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+                    Professional Basketball Coaching for Kids, Teens &amp; Adults in Mumbai.
+                    <span class="block text-sm font-light text-gray-400 mt-1">"Changing Lives Through Hoops"</span>
+                </p>
+                <div class="flex flex-wrap gap-4 mt-8 justify-center md:justify-start">
+                    <button class="btn-primary" onclick="document.getElementById(&#39;enquiry&#39;).scrollIntoView({behavior:&#39;smooth&#39;})" style="translate: none; rotate: none; scale: none; opacity: 0; transform: scale(0.8, 0.8);">
+                        <i class="fas fa-basketball-ball mr-2"></i> Book Free Trial
+                    </button>
+                    <a href="tel:07738140637" class="btn-outline" style="translate: none; rotate: none; scale: none; opacity: 0; transform: scale(0.8, 0.8);">
+                        <i class="fas fa-phone-alt mr-2"></i> Call Now
+                    </a>
+                    <a href="https://wa.me/917738140637?text=Hi!%20I%20want%20to%20know%20more%20about%20ProNets%20Basketball%20Academy." target="_blank" class="btn-whatsapp" style="translate: none; rotate: none; scale: none; opacity: 0; transform: scale(0.8, 0.8);">
+                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+            <!-- Animated Basketball -->
+            <div class="absolute right-10 bottom-20 hidden lg:block aos-init aos-animate" data-aos="fade-left" data-aos-delay="500">
+                <div class="basketball-bounce text-8xl text-brand-orange opacity-60">
+                    <i class="fas fa-basketball-ball"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Scroll Indicator -->
+        <div class="scroll-down text-white text-2xl">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ==================== WHY CHOOSE ==================== -->
+    <section class="py-20 bg-brand-black" id="why">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 aos-init" data-aos="fade-up">
+                Why <span class="text-brand-red">ProNets</span>?
+            </h2>
+            <p class="text-center text-gray-400 max-w-2xl mx-auto mb-12 aos-init" data-aos="fade-up" data-aos-delay="100">
+                Where champions are forged, and character is built.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="glass p-6 text-center hover:scale-105 transition duration-300 aos-init" data-aos="fade-up" data-aos-delay="0">
+                    <i class="fas fa-medal text-5xl text-brand-red mb-4"></i>
+                    <h3 class="text-xl font-bold">Professional Coaching</h3>
+                    <p class="text-gray-400 text-sm">NIS-certified, national-level coaches.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass p-6 text-center hover:scale-105 transition duration-300 aos-init" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-bullseye text-5xl text-brand-red mb-4"></i>
+                    <h3 class="text-xl font-bold">Skill Development</h3>
+                    <p class="text-gray-400 text-sm">Focus on fundamentals &amp; game-based learning.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass p-6 text-center hover:scale-105 transition duration-300 aos-init" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-dumbbell text-5xl text-brand-red mb-4"></i>
+                    <h3 class="text-xl font-bold">Fitness Training</h3>
+                    <p class="text-gray-400 text-sm">Agility, strength &amp; conditioning.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="glass p-6 text-center hover:scale-105 transition duration-300 aos-init" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-trophy text-5xl text-brand-red mb-4"></i>
+                    <h3 class="text-xl font-bold">Tournament Exposure</h3>
+                    <p class="text-gray-400 text-sm">Inter-society &amp; regional tournaments.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="glass p-6 text-center hover:scale-105 transition duration-300 aos-init" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-chalkboard-teacher text-5xl text-brand-red mb-4"></i>
+                    <h3 class="text-xl font-bold">Experienced Coaches</h3>
+                    <p class="text-gray-400 text-sm">Diligent, encouraging &amp; passionate.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="glass p-6 text-center hover:scale-105 transition duration-300 aos-init" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fas fa-chart-line text-5xl text-brand-red mb-4"></i>
+                    <h3 class="text-xl font-bold">Modern Training Methods</h3>
+                    <p class="text-gray-400 text-sm">Game-based learning &amp; analytics.</p>
+                </div>
+                <!-- Card 7 -->
+                <div class="glass p-6 text-center hover:scale-105 transition duration-300 aos-init" data-aos="fade-up" data-aos-delay="600">
+                    <i class="fas fa-smile text-5xl text-brand-red mb-4"></i>
+                    <h3 class="text-xl font-bold">Fun Learning Environment</h3>
+                    <p class="text-gray-400 text-sm">Enjoyable &amp; accessible for all.</p>
+                </div>
+                <!-- Card 8 -->
+                <div class="glass p-6 text-center hover:scale-105 transition duration-300 aos-init" data-aos="fade-up" data-aos-delay="700">
+                    <i class="fas fa-star text-5xl text-brand-red mb-4"></i>
+                    <h3 class="text-xl font-bold">Character Building</h3>
+                    <p class="text-gray-400 text-sm">Discipline, leadership &amp; teamwork.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="py-20 bg-[#0D0D0D]" id="about">
+        <div class="container mx-auto px-6 flex flex-col lg:flex-row gap-12 items-center">
+            <div class="lg:w-1/2 aos-init" data-aos="fade-right">
+                <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+                    About <span class="text-brand-red">ProNets</span>
+                </h2>
+                <p class="text-gray-300 mt-4 text-lg leading-relaxed">
+                    Founded in 2015, ProNets Basketball Academy has been steadily emerging as a <span class="text-brand-red font-semibold">strong platform for young players</span>, focusing on skill development, confidence building, discipline, and teamwork.
+                </p>
+                <p class="text-gray-400 mt-4 leading-relaxed">
+                    Led by head coach and owner <span class="text-white font-semibold">Ashutosh V Sangle</span>, a national-level and NIS-certified coach, the academy operates across multiple schools and societies in Powai, Thane, and Ghatkopar.
+                </p>
+                <p class="text-gray-400 mt-4 leading-relaxed">
+                    With a dedicated coaching team and regular tournaments – including the signature <span class="text-brand-red font-semibold">intra-academy competition</span> – every player, whether beginner or intermediate, gets equal opportunities to play, learn, and grow.
+                </p>
+                <div class="grid grid-cols-2 gap-4 mt-6">
+                    <div>
+                        <h4 class="text-brand-red font-bold text-lg">Mission</h4>
+                        <p class="text-gray-400 text-sm">Top-tier training fostering personal growth &amp; teamwork.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-brand-red font-bold text-lg">Vision</h4>
+                        <p class="text-gray-400 text-sm">Beacon of basketball excellence teaching life lessons.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 aos-init" data-aos="fade-left">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="glass p-6 text-center">
+                        <div class="text-brand-red text-4xl font-orbitron font-bold">15+</div>
+                        <p class="text-gray-300 text-sm">Years Experience</p>
+                    </div>
+                    <div class="glass p-6 text-center">
+                        <div class="text-brand-red text-4xl font-orbitron font-bold">500+</div>
+                        <p class="text-gray-300 text-sm">Students Trained</p>
+                    </div>
+                    <div class="glass p-6 text-center">
+                        <div class="text-brand-red text-4xl font-orbitron font-bold">40+</div>
+                        <p class="text-gray-300 text-sm">Tournament Wins</p>
+                    </div>
+                    <div class="glass p-6 text-center">
+                        <div class="text-brand-red text-4xl font-orbitron font-bold">100+</div>
+                        <p class="text-gray-300 text-sm">Medals Won</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROGRAMS ==================== -->
+    <section class="py-20 bg-brand-black" id="programs">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 aos-init" data-aos="fade-up">
+                Our <span class="text-brand-red">Programs</span>
+            </h2>
+            <p class="text-center text-gray-400 max-w-2xl mx-auto mb-12 aos-init" data-aos="fade-up" data-aos-delay="100">
+                Tailored training for every age and skill level.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Program cards -->
+                <div class="glass p-6 hover:scale-105 transition duration-300 aos-init" data-aos="fade-up" data-aos-delay="0">
+                    <div class="text-brand-red text-3xl font-orbitron font-bold">U8</div>
+                    <h3 class="text-xl font-bold mt-2">Under 8</h3>
+                    <p class="text-gray-400 text-sm">Age 5-8 yrs · 1 hr</p>
+                    <p class="text-gray-300 text-sm mt-2">Beginner · Fundamentals &amp; Fun</p>
+                    <button class="btn-primary w-full mt-4 text-sm py-2" onclick="document.getElementById(&#39;enquiry&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Enrol Now</button>
+                </div>
+                <div class="glass p-6 hover:scale-105 transition duration-300 aos-init" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-brand-red text-3xl font-orbitron font-bold">U12</div>
+                    <h3 class="text-xl font-bold mt-2">Under 12</h3>
+                    <p class="text-gray-400 text-sm">Age 9-12 yrs · 1.5 hrs</p>
+                    <p class="text-gray-300 text-sm mt-2">Intermediate · Skill Development</p>
+                    <button class="btn-primary w-full mt-4 text-sm py-2" onclick="document.getElementById(&#39;enquiry&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Enrol Now</button>
+                </div>
+                <div class="glass p-6 hover:scale-105 transition duration-300 aos-init" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-brand-red text-3xl font-orbitron font-bold">U16</div>
+                    <h3 class="text-xl font-bold mt-2">Under 16</h3>
+                    <p class="text-gray-400 text-sm">Age 13-16 yrs · 1.5 hrs</p>
+                    <p class="text-gray-300 text-sm mt-2">Advanced · Competitive Training</p>
+                    <button class="btn-primary w-full mt-4 text-sm py-2" onclick="document.getElementById(&#39;enquiry&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Enrol Now</button>
+                </div>
+                <div class="glass p-6 hover:scale-105 transition duration-300 aos-init" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-brand-red text-3xl font-orbitron font-bold">U18</div>
+                    <h3 class="text-xl font-bold mt-2">Under 18</h3>
+                    <p class="text-gray-400 text-sm">Age 17-18 yrs · 2 hrs</p>
+                    <p class="text-gray-300 text-sm mt-2">Elite · Tournament Preparation</p>
+                    <button class="btn-primary w-full mt-4 text-sm py-2" onclick="document.getElementById(&#39;enquiry&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Enrol Now</button>
+                </div>
+                <div class="glass p-6 hover:scale-105 transition duration-300 aos-init" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-brand-red text-3xl font-orbitron font-bold">AD</div>
+                    <h3 class="text-xl font-bold mt-2">Adults</h3>
+                    <p class="text-gray-400 text-sm">19+ yrs · 1.5 hrs</p>
+                    <p class="text-gray-300 text-sm mt-2">All Levels · Fitness &amp; Recreation</p>
+                    <button class="btn-primary w-full mt-4 text-sm py-2" onclick="document.getElementById(&#39;enquiry&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Enrol Now</button>
+                </div>
+                <div class="glass p-6 hover:scale-105 transition duration-300 aos-init" data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-brand-red text-3xl font-orbitron font-bold">WE</div>
+                    <h3 class="text-xl font-bold mt-2">Weekend Batch</h3>
+                    <p class="text-gray-400 text-sm">All Ages · 2 hrs</p>
+                    <p class="text-gray-300 text-sm mt-2">All Levels · Weekend Warriors</p>
+                    <button class="btn-primary w-full mt-4 text-sm py-2" onclick="document.getElementById(&#39;enquiry&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Enrol Now</button>
+                </div>
+                <div class="glass p-6 hover:scale-105 transition duration-300 aos-init" data-aos="fade-up" data-aos-delay="600">
+                    <div class="text-brand-red text-3xl font-orbitron font-bold">GR</div>
+                    <h3 class="text-xl font-bold mt-2">Girls Batch</h3>
+                    <p class="text-gray-400 text-sm">Age 7-18 yrs · 1.5 hrs</p>
+                    <p class="text-gray-300 text-sm mt-2">All Levels · Empowering Girls</p>
+                    <button class="btn-primary w-full mt-4 text-sm py-2" onclick="document.getElementById(&#39;enquiry&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Enrol Now</button>
+                </div>
+                <div class="glass p-6 hover:scale-105 transition duration-300 aos-init" data-aos="fade-up" data-aos-delay="700">
+                    <div class="text-brand-red text-3xl font-orbitron font-bold">AC</div>
+                    <h3 class="text-xl font-bold mt-2">Advanced Competitive</h3>
+                    <p class="text-gray-400 text-sm">13+ yrs · 2 hrs</p>
+                    <p class="text-gray-300 text-sm mt-2">Elite · Pro Pathway</p>
+                    <button class="btn-primary w-full mt-4 text-sm py-2" onclick="document.getElementById(&#39;enquiry&#39;).scrollIntoView({behavior:&#39;smooth&#39;})">Enrol Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== COACHES ==================== -->
+    <section class="py-20 bg-[#0D0D0D]" id="coaches">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 aos-init" data-aos="fade-up">
+                Meet Our <span class="text-brand-red">Coaches</span>
+            </h2>
+            <p class="text-center text-gray-400 max-w-2xl mx-auto mb-12 aos-init" data-aos="fade-up" data-aos-delay="100">
+                Dedicated professionals committed to your growth.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Coach 1 -->
+                <div class="coach-card glass p-6 text-center aos-init" data-aos="flip-up" data-aos-delay="0">
+                    <div class="w-32 h-32 rounded-full mx-auto bg-gradient-to-r from-brand-red to-brand-orange flex items-center justify-center text-5xl font-bold text-white mb-4">
+                        AS
+                    </div>
+                    <h3 class="text-2xl font-bold">Ashutosh V Sangle</h3>
+                    <p class="text-brand-red font-semibold">Head Coach &amp; Owner</p>
+                    <div class="text-sm text-gray-400 mt-2 space-y-1">
+                        <p>✅ National-level Player</p>
+                        <p>✅ NIS-Certified Coach</p>
+                        <p>✅ 15+ Years Experience</p>
+                        <p>✅ Multiple Tournament Wins</p>
+                    </div>
+                    <p class="text-gray-300 text-sm mt-2">Specialization: Player Development</p>
+                    <div class="flex justify-center gap-4 mt-4 text-2xl text-gray-400">
+                        <a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#" class="hover:text-brand-red"><i class="fab fa-instagram"></i></a>
+                        <a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#" class="hover:text-brand-red"><i class="fab fa-facebook"></i></a>
+                        <a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#" class="hover:text-brand-red"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- Coach 2 (placeholder) -->
+                <div class="coach-card glass p-6 text-center aos-init" data-aos="flip-up" data-aos-delay="100">
+                    <div class="w-32 h-32 rounded-full mx-auto bg-gradient-to-r from-brand-red to-brand-orange flex items-center justify-center text-5xl font-bold text-white mb-4">
+                        RS
+                    </div>
+                    <h3 class="text-2xl font-bold">Rahul Sharma</h3>
+                    <p class="text-brand-red font-semibold">Assistant Coach – Skills</p>
+                    <div class="text-sm text-gray-400 mt-2 space-y-1">
+                        <p>✅ State-level Player</p>
+                        <p>✅ 8 Years Coaching</p>
+                        <p>✅ Specializes in Ball Handling</p>
+                    </div>
+                    <p class="text-gray-300 text-sm mt-2">Specialization: Ball Handling &amp; Shooting</p>
+                    <div class="flex justify-center gap-4 mt-4 text-2xl text-gray-400">
+                        <a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#" class="hover:text-brand-red"><i class="fab fa-instagram"></i></a>
+                        <a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#" class="hover:text-brand-red"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <!-- Coach 3 (placeholder) -->
+                <div class="coach-card glass p-6 text-center aos-init" data-aos="flip-up" data-aos-delay="200">
+                    <div class="w-32 h-32 rounded-full mx-auto bg-gradient-to-r from-brand-red to-brand-orange flex items-center justify-center text-5xl font-bold text-white mb-4">
+                        AP
+                    </div>
+                    <h3 class="text-2xl font-bold">Anita Patel</h3>
+                    <p class="text-brand-red font-semibold">Fitness &amp; Conditioning Coach</p>
+                    <div class="text-sm text-gray-400 mt-2 space-y-1">
+                        <p>✅ Certified Fitness Trainer</p>
+                        <p>✅ 6 Years Experience</p>
+                        <p>✅ Specializes in Agility &amp; Strength</p>
+                    </div>
+                    <p class="text-gray-300 text-sm mt-2">Specialization: Strength &amp; Conditioning</p>
+                    <div class="flex justify-center gap-4 mt-4 text-2xl text-gray-400">
+                        <a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#" class="hover:text-brand-red"><i class="fab fa-instagram"></i></a>
+                        <a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#" class="hover:text-brand-red"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ACHIEVEMENTS (Counters) ==================== -->
+    <section class="py-20 bg-brand-black" id="achievements">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 aos-init" data-aos="fade-up">
+                Our <span class="text-brand-red">Achievements</span>
+            </h2>
+            <p class="text-gray-400 max-w-2xl mx-auto mb-12 aos-init" data-aos="fade-up" data-aos-delay="100">
+                A legacy of excellence and hard work.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div data-aos="zoom-in" data-aos-delay="0" class="aos-init">
+                    <div class="counter-number" data-count="500">0</div>
+                    <p class="text-gray-300 font-semibold">Students Trained</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="100" class="aos-init">
+                    <div class="counter-number" data-count="40">0</div>
+                    <p class="text-gray-300 font-semibold">Tournament Wins</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200" class="aos-init">
+                    <div class="counter-number" data-count="15">0</div>
+                    <p class="text-gray-300 font-semibold">Years Experience</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="300" class="aos-init">
+                    <div class="counter-number" data-count="100">0</div>
+                    <p class="text-gray-300 font-semibold">Medals Won</p>
+                </div>
+            </div>
+            <!-- Awards Timeline -->
+            <div class="mt-16 text-left">
+                <h3 class="text-2xl font-bold text-brand-red mb-6">Recent Tournament Highlights</h3>
+                <div class="space-y-4">
+                    <div class="glass p-4 flex flex-wrap items-center gap-4 aos-init" data-aos="fade-right">
+                        <span class="text-brand-red font-orbitron text-lg">🏆</span>
+                        <div><span class="font-bold">Pronets Intra Basketball Tournament 2026</span> – Mumbai Zone, Powai (April 17-19, 2026)</div>
+                    </div>
+                    <div class="glass p-4 flex flex-wrap items-center gap-4 aos-init" data-aos="fade-right" data-aos-delay="100">
+                        <span class="text-brand-red font-orbitron text-lg">🥇</span>
+                        <div><span class="font-bold">Under-10 Champions</span> – Maharashtra Hoopers</div>
+                    </div>
+                    <div class="glass p-4 flex flex-wrap items-center gap-4 aos-init" data-aos="fade-right" data-aos-delay="200">
+                        <span class="text-brand-red font-orbitron text-lg">🥈</span>
+                        <div><span class="font-bold">Under-10 Runners-up</span> – Punjab Ballers</div>
+                    </div>
+                    <div class="glass p-4 flex flex-wrap items-center gap-4 aos-init" data-aos="fade-right" data-aos-delay="300">
+                        <span class="text-brand-red font-orbitron text-lg">⭐</span>
+                        <div><span class="font-bold">MVP</span> – Vardaan Khosala</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GALLERY ==================== -->
+    <section class="py-20 bg-[#0D0D0D]" id="gallery">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 aos-init" data-aos="fade-up">
+                Photo <span class="text-brand-red">Gallery</span>
+            </h2>
+            <p class="text-center text-gray-400 max-w-2xl mx-auto mb-12 aos-init" data-aos="fade-up" data-aos-delay="100">
+                Moments of passion, training, and victory.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="gallery-item overflow-hidden rounded-xl aos-init" data-aos="zoom-in" data-aos-delay="0">
+                    <img src="./index_files/photo-1546519638-68e109498ffc" alt="Training" class="w-full h-48 object-cover transition">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-xl aos-init" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="./index_files/photo-1546519638-68e109498ffc" alt="Match" class="w-full h-48 object-cover transition">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-xl aos-init" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="./index_files/photo-1546519638-68e109498ffc" alt="Celebration" class="w-full h-48 object-cover transition">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-xl aos-init" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="./index_files/photo-1546519638-68e109498ffc" alt="Kids" class="w-full h-48 object-cover transition">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-xl aos-init" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="./index_files/photo-1546519638-68e109498ffc" alt="Coaches" class="w-full h-48 object-cover transition">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-xl aos-init" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="./index_files/photo-1546519638-68e109498ffc" alt="Awards" class="w-full h-48 object-cover transition">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section class="py-20 bg-brand-black" id="testimonials">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 aos-init" data-aos="fade-up">
+                What <span class="text-brand-red">They Say</span>
+            </h2>
+            <p class="text-center text-gray-400 max-w-2xl mx-auto mb-12 aos-init" data-aos="fade-up" data-aos-delay="100">
+                Real reviews from our students and parents.
+            </p>
+            <div class="testimonial-slider flex overflow-x-auto snap-x snap-mandatory gap-6 pb-4 aos-init" data-aos="fade-up">
+                <div class="slide glass p-6 min-w-[280px] md:min-w-[350px]">
+                    <div class="flex items-center gap-2 text-brand-orange mb-2">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm">"Coaches are diligent, encouraging, and passionate. The academy provides exposure to events like inter-society matches and regional tournaments."</p>
+                    <p class="mt-4 font-semibold">– Parent of U12 Player</p>
+                </div>
+                <div class="slide glass p-6 min-w-[280px] md:min-w-[350px]">
+                    <div class="flex items-center gap-2 text-brand-orange mb-2">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm">"The coaching staff is dedicated, knowledgeable, and brings out the best in the children."</p>
+                    <p class="mt-4 font-semibold">– Parent of U16 Player</p>
+                </div>
+                <div class="slide glass p-6 min-w-[280px] md:min-w-[350px]">
+                    <div class="flex items-center gap-2 text-brand-orange mb-2">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm">"ProNets changed my game completely. The drills and fitness routines are world-class. I made it to the district team!"</p>
+                    <p class="mt-4 font-semibold">– Student, Under 18</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SOCIAL MEDIA ==================== -->
+    <section class="py-20 bg-[#0D0D0D]" id="social">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4 aos-init" data-aos="fade-up">
+                Follow <span class="text-brand-red">Us</span>
+            </h2>
+            <p class="text-gray-400 max-w-2xl mx-auto mb-8 aos-init" data-aos="fade-up" data-aos-delay="100">
+                Stay connected for updates, drills, and inspiration.
+            </p>
+            <div class="flex justify-center gap-8 text-5xl aos-init" data-aos="zoom-in">
+                <a href="https://www.instagram.com/pronets_sports/" target="_blank" class="text-gray-400 hover:text-brand-red transition">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/Pronets07" target="_blank" class="text-gray-400 hover:text-brand-red transition">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#" class="text-gray-400 hover:text-brand-red transition">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://wa.me/917738140637" target="_blank" class="text-gray-400 hover:text-brand-red transition">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="mt-8">
+                <a href="https://www.instagram.com/pronets_sports/" target="_blank" class="btn-outline inline-block">
+                    <i class="fab fa-instagram mr-2"></i> Follow @pronets_sports
+                </a>
+            </div>
+            <!-- Embed Instagram/Facebook (placeholder) -->
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="glass p-4 h-48 flex items-center justify-center text-gray-500">
+                    <i class="fab fa-instagram text-4xl mr-2"></i> Instagram Feed (Embed)
+                </div>
+                <div class="glass p-4 h-48 flex items-center justify-center text-gray-500">
+                    <i class="fab fa-facebook text-4xl mr-2"></i> Facebook Feed (Embed)
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ENQUIRY / FREE TRIAL ==================== -->
+    <section class="py-20 bg-brand-black" id="enquiry">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto glass p-8 md:p-12 aos-init" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-2">
+                    Book Your <span class="text-brand-red">Free Trial</span>
+                </h2>
+                <p class="text-center text-gray-400 mb-8">Fill in your details and we'll get back to you.</p>
+                <form id="enquiryForm" class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" placeholder="Full Name *" required="" class="w-full p-3 rounded-lg bg-black/50 border border-gray-700 text-white focus:border-brand-red outline-none">
+                        <input type="tel" placeholder="Phone Number *" required="" class="w-full p-3 rounded-lg bg-black/50 border border-gray-700 text-white focus:border-brand-red outline-none">
+                    </div>
+                    <input type="email" placeholder="Email Address" class="w-full p-3 rounded-lg bg-black/50 border border-gray-700 text-white focus:border-brand-red outline-none">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <select class="w-full p-3 rounded-lg bg-black/50 border border-gray-700 text-white focus:border-brand-red outline-none">
+                            <option>Select Age Group</option>
+                            <option>Under 8 (5-8 yrs)</option>
+                            <option>Under 12 (9-12 yrs)</option>
+                            <option>Under 16 (13-16 yrs)</option>
+                            <option>Under 18 (17-18 yrs)</option>
+                            <option>Adults (19+ yrs)</option>
+                        </select>
+                        <select class="w-full p-3 rounded-lg bg-black/50 border border-gray-700 text-white focus:border-brand-red outline-none">
+                            <option>Select Program</option>
+                            <option>Weekend Batch</option>
+                            <option>Girls Batch</option>
+                            <option>Advanced Competitive</option>
+                        </select>
+                    </div>
+                    <textarea placeholder="Your Message (Optional)" rows="3" class="w-full p-3 rounded-lg bg-black/50 border border-gray-700 text-white focus:border-brand-red outline-none"></textarea>
+                    <button type="submit" class="btn-primary w-full py-3 text-lg">
+                        <i class="fas fa-basketball-ball mr-2"></i> Book Free Trial
+                    </button>
+                </form>
+                <div class="mt-6 text-center">
+                    <p class="text-gray-400">Or reach us directly on <a href="https://wa.me/917738140637" target="_blank" class="text-brand-red hover:underline"><i class="fab fa-whatsapp"></i> WhatsApp</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="py-20 bg-[#0D0D0D]" id="contact">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div data-aos="fade-right" class="aos-init">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                        Get in <span class="text-brand-red">Touch</span>
+                    </h2>
+                    <p class="text-gray-400 mb-6">We'd love to hear from you. Visit us or reach out.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-map-marker-alt text-brand-red text-2xl mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Address</p>
+                                <p class="text-gray-400 text-sm">57, 1102, Ganga Sagar CHS, Sugam Society, Savitribai Phule Nagar, Pant Nagar, Ghatkopar East, Mumbai – 400075</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-phone-alt text-brand-red text-2xl"></i>
+                            <div>
+                                <p class="font-semibold">Phone</p>
+                                <a href="tel:07738140637" class="text-gray-400 hover:text-brand-red">07738140637</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-envelope text-brand-red text-2xl"></i>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <a href="mailto:sangle.ashutosh@gmail.com" class="text-gray-400 hover:text-brand-red">sangle.ashutosh@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-4 mt-6">
+                            <a href="tel:07738140637" class="btn-primary text-sm py-2 px-6"><i class="fas fa-phone-alt mr-2"></i> Call</a>
+                            <a href="https://wa.me/917738140637" target="_blank" class="btn-whatsapp text-sm py-2 px-6"><i class="fab fa-whatsapp mr-2"></i> WhatsApp</a>
+                            <a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#" class="btn-outline text-sm py-2 px-6"><i class="fas fa-directions mr-2"></i> Directions</a>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left" class="aos-init">
+                    <!-- Google Maps Embed -->
+                    <div class="glass overflow-hidden h-64 lg:h-96">
+                        <iframe src="./index_files/embed.html" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="py-20 bg-brand-black" id="faq">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 aos-init" data-aos="fade-up">
+                Frequently Asked <span class="text-brand-red">Questions</span>
+            </h2>
+            <div class="space-y-4 mt-8">
+                <div class="glass p-4 aos-init" data-aos="fade-up">
+                    <div class="faq-question flex justify-between items-center" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;)">
+                        <span class="font-bold text-lg">What age groups do you accept?</span>
+                        <i class="fas fa-plus text-brand-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 text-sm mt-2">
+                        We accept ages 7 to 25, divided into appropriate skill and age groups.
+                    </div>
+                </div>
+                <div class="glass p-4 aos-init" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question flex justify-between items-center" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;)">
+                        <span class="font-bold text-lg">Do you offer trials?</span>
+                        <i class="fas fa-plus text-brand-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 text-sm mt-2">
+                        Yes! We offer a free trial session for all new students. Fill the form above to book.
+                    </div>
+                </div>
+                <div class="glass p-4 aos-init" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question flex justify-between items-center" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;)">
+                        <span class="font-bold text-lg">What is the fee structure?</span>
+                        <i class="fas fa-plus text-brand-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 text-sm mt-2">
+                        Fees vary by program. Please contact us for the latest pricing and discounts.
+                    </div>
+                </div>
+                <div class="glass p-4 aos-init" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question flex justify-between items-center" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;)">
+                        <span class="font-bold text-lg">Do you have girls-only batches?</span>
+                        <i class="fas fa-plus text-brand-red"></i>
+                    </div>
+                    <div class="faq-answer text-gray-400 text-sm mt-2">
+                        Absolutely. We have dedicated Girls Batch to empower female athletes.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-[#0D0D0D] border-t border-gray-800 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bebas text-brand-red">ProNets</h3>
+                    <p class="text-gray-400 text-sm mt-2">"Changing Lives Through Hoops"</p>
+                    <p class="text-gray-500 text-xs mt-4">© 2026 ProNets Basketball Academy. All Rights Reserved.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-2">Quick Links</h4>
+                    <ul class="text-gray-400 text-sm space-y-1">
+                        <li><a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#home" class="hover:text-brand-red">Home</a></li>
+                        <li><a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#about" class="hover:text-brand-red">About</a></li>
+                        <li><a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#programs" class="hover:text-brand-red">Programs</a></li>
+                        <li><a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#gallery" class="hover:text-brand-red">Gallery</a></li>
+                        <li><a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#contact" class="hover:text-brand-red">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-2">Programs</h4>
+                    <ul class="text-gray-400 text-sm space-y-1">
+                        <li><a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#programs" class="hover:text-brand-red">Under 8</a></li>
+                        <li><a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#programs" class="hover:text-brand-red">Under 12</a></li>
+                        <li><a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#programs" class="hover:text-brand-red">Under 16</a></li>
+                        <li><a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#programs" class="hover:text-brand-red">Adults</a></li>
+                        <li><a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#programs" class="hover:text-brand-red">Girls Batch</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-2">Connect</h4>
+                    <div class="flex gap-4 text-2xl text-gray-400">
+                        <a href="https://www.instagram.com/pronets_sports/" target="_blank" class="hover:text-brand-red"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/Pronets07" target="_blank" class="hover:text-brand-red"><i class="fab fa-facebook"></i></a>
+                        <a href="file:///C:/Users/pansa/OneDrive/Desktop/Pronets%20Baskbetball%20Academy/Pronets.html#" class="hover:text-brand-red"><i class="fab fa-youtube"></i></a>
+                        <a href="https://wa.me/917738140637" target="_blank" class="hover:text-brand-red"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-400 text-sm">Newsletter</p>
+                        <div class="flex mt-1">
+                            <input type="email" placeholder="Your email" class="p-2 rounded-l-lg bg-black/50 border border-gray-700 text-white focus:outline-none w-full">
+                            <button class="bg-brand-red px-4 rounded-r-lg hover:bg-brand-orange transition">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500 text-xs">
+                <p>Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <!-- AOS -->
+    <script src="./index_files/aos.js.download"></script>
+    <!-- GSAP (for advanced animations, but we use minimal) -->
+    <script src="./index_files/gsap.min.js.download"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+
+        // Counter animation (simple)
+        document.addEventListener('DOMContentLoaded', function() {
+            const counters = document.querySelectorAll('.counter-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-count'));
+                let current = 0;
+                const increment = target / 80; // 80 steps
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                // Use Intersection Observer to start when visible
+                const observer = new IntersectionObserver((entries) => {
+                    if (entries[0].isIntersecting) {
+                        updateCounter();
+                        observer.unobserve(counter);
+                    }
+                }, { threshold: 0.5 });
+                observer.observe(counter);
+            });
+        });
+
+        // FAQ toggle (additional interaction)
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                answer.classList.toggle('open');
+                // Toggle plus/minus
+                const icon = this.querySelector('i');
+                if (answer.classList.contains('open')) {
+                    icon.className = 'fas fa-minus text-brand-red';
+                } else {
+                    icon.className = 'fas fa-plus text-brand-red';
+                }
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // GSAP simple intro animation for hero (optional)
+        gsap.from(".hero-bg h1", { duration: 1.2, y: 100, opacity: 0, ease: "power3.out" });
+        gsap.from(".hero-bg p", { duration: 1.2, y: 50, opacity: 0, delay: 0.3, ease: "power3.out" });
+        gsap.from(".hero-bg .btn-primary, .hero-bg .btn-outline, .hero-bg .btn-whatsapp", {
+            duration: 0.8,
+            scale: 0.8,
+            opacity: 0,
+            stagger: 0.2,
+            delay: 0.6,
+            ease: "back.out(1.7)"
+        });
+
+        // Simple sticky CTA scroll hide/show (optional)
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const cta = document.querySelector('.sticky-cta');
+            if (currentScroll > 300) {
+                cta.style.display = 'flex';
+            } else {
+                cta.style.display = 'flex';
+            }
+        });
+    </script>
+
+</body></html>
